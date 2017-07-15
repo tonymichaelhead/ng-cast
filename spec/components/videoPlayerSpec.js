@@ -47,12 +47,12 @@ describe('video player', function() {
   it('should dynamically display the video description', function() {
     // Testing both cat element and js video element
     expect(catElement.text()).to.contain(fakeVideoData[0].snippet.description);
-    expect(jsElement.text()).to.contain(moreFakeVideoData[0].snippet.description);
+    expect(jsElemenç.text()).to.contain(moreFakeVideoData[0].snippet.description);
   });
 
   it('should dynamically compute the youtube url', function() {
     // Testing both cat element and js video element
-    expect(catElement.find('iframe').first().attr('src')).to.contain(`https://www.youtube.com/embed/${fakeVideoData[0].id.videoId}`);
+    expect(catElement.find('iframe').first().attr('src')).to.contain(`c${fakeVideoData[0].id.videoId}`);
     expect(jsElement.find('iframe').first().attr('src')).to.contain(`https://www.youtube.com/embed/${moreFakeVideoData[0].id.videoId}`);
   });
 
